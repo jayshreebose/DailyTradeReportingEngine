@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:component-scan base-package="com.jpmorgan.*"></context:component-scan>
+
+<!-- Currencies -->
+
+
+	
+	<bean id="parser" class="com.jpmorgan.DailyTradeReportingApplication.parser.TradeParserImpl">
+	</bean>
+	
+	<bean id="processor" class="com.jpmorgan.DailyTradeReportingApplication.processor.TradeProcessorImpl">
+	</bean>
+	
+	<bean id="dailyReport" class="com.jpmorgan.DailyTradeReportingApplication.model.DailyReport">
+	</bean>
+	
+	<bean id="rankingIncoming" class="com.jpmorgan.DailyTradeReportingApplication.model.Ranking">
+	    <constructor-arg value="INCOMING RANKING : "></constructor-arg>
+	</bean>
+	
+	<bean id="rankingOutgoing" class="com.jpmorgan.DailyTradeReportingApplication.model.Ranking">
+		<constructor-arg value="OUTGOING RANKING : "></constructor-arg>
+	</bean>
+	
+	<bean id="service" class="com.jpmorgan.DailyTradeReportingApplication.service.TradeServiceImpl">
+		<property name="parser" ref="parser"></property>
+		<property name="processor" ref="processor"></property>
+		<property name="dailyReport" ref="dailyReport"></property>
+		<property name="rankingIncoming" ref="rankingIncoming"></property>
+		<property name="rankingOutgoing" ref="rankingOutgoing"></property>
+	</bean>
+
+</beans>

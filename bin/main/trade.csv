@@ -1,0 +1,13 @@
+Entity,Buy/Sell,Agreed FX,Currency,InstructionDate,SettlementDate,Units,PricePerUnit
+foo,B,0.5,SGP,01-Jan-16,02-Jan-16,200,100.25
+bar,S,0.22,AED,01-Jan-16,02-Jan-16,450,150.5
+foo,S,0.5,SAR,01-Jan-16,02-Jan-16,400,100.25
+two,B,1,USD,01-Jan-16,02-Jan-16,300,100.25
+bar,B,0.22,AED,01-Jan-16,02-Jan-16,500,150.5
+three,S,0.22,AED,01-Jan-16,02-Jan-16,200,115.5
+foo,B,1,USD,02-Jan-16,03-Jan-16,300,100.25
+bar,S,0.22,AED,03-Jan-16,04-Jan-16,300,150.5
+one,S,0.5,SAR,04-Jan-16,04-Jan-16,500,125.5
+two,B,0.3,TGH,05-Jan-16,05-Jan-16,300,100.25
+bar,B,0.3,IDS,07-Jan-16,08-Jan-16,450,150.5
+bar,B,0.22,AED,07-Jan-16,07-Jan-16,450,150.5
